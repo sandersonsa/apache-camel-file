@@ -8,7 +8,7 @@ public class MyRoute extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {                
-        from("file://input_data/?recursive=true&delete=true&readLock=true").to("file://output_data?flatten=true")
+        from("file://input_data/?recursive=true&delete=true&readLock=fileLock").to("file://output_data?flatten=true")
         .log("File processed: ${header.CamelFileName}")
         .log("File processed: ${header.CamelFilePath}");
     }
