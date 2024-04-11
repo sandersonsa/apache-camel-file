@@ -55,7 +55,21 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>				
+		</dependency>
+		<!-- <dependency> -->
+			<!-- The OpenShift Spring Starter automatically imports the "io.dekorate:openshift-annotations" dependency. -->
+			<!-- <groupId>io.dekorate</groupId>
+			<artifactId>openshift-spring-starter</artifactId>
+			<version>${dekorate.version}</version>
+		</dependency> -->
+		
+		<!-- https://mvnrepository.com/artifact/io.dekorate/openshift-spring-starter -->
+		<!-- <dependency>
+			<groupId>io.dekorate</groupId>
+			<artifactId>openshift-spring-starter</artifactId>
+			<version>4.1.2</version>
+		</dependency> -->
+
 	</dependencies>
 
 	<build>
