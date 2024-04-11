@@ -8,9 +8,11 @@ public class MyRoute extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {                
-        from("file://input_data/?recursive=true&delete=true&readLock=fileLock").to("file://output_data?flatten=true")
-        .log("File processed: ${header.CamelFileName}")
-        .log("File processed: ${header.CamelFilePath}");
+        from("file://input_data/?recursive=true&delete=true&readLock=fileLock")
+            .to("file://output_data?flatten=true").routeId("processar-arquivos-pods")
+            .log("File processed: ${header.CamelFileName}")
+        // .log("File processed: ${header.CamelFilePath}")
+        ;
     }
 
 }
